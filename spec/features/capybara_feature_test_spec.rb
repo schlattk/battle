@@ -14,4 +14,13 @@ RSpec.feature "Capybara feature test" do
 
     expect(page).to have_content "Kate HP: 20, Konrad HP: 20"
   end
+  scenario "players can launch an attack" do
+
+    attack
+
+    expect(page). to have_content "Kate attacks Konrad"
+
+  end
+
+
 end

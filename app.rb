@@ -20,6 +20,7 @@ enable :sessions
     @name1 = session[:name1]
     @name2 = session[:name2]
     @hit_points = 20
+    @confirmation ="#{@name1} attacks #{@name2}"
     erb :names
   end
 
