@@ -19,9 +19,16 @@ enable :sessions
   get '/play' do
     @name1 = session[:name1]
     @name2 = session[:name2]
+    @attack = session[:attack]
     @hit_points = 20
     @confirmation ="#{@name1} attacks #{@name2}"
     erb :names
+  end
+
+  post '/attack' do
+    session[:attack] = true
+    redirect "/play"
+    session[:attack] = false
   end
 
   # start the server if ruby file executed directly
