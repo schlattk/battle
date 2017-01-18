@@ -19,6 +19,7 @@ enable :sessions
   get '/play' do
     @name1 = session[:name1]
     @name2 = session[:name2]
+    @hit_points = 20
     erb :names
   end
 
