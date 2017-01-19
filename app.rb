@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra'
+require './views/player.rb'
 
 class Battle < Sinatra::Base
 
