@@ -16,10 +16,11 @@ end
 it "player's hit_points should be reduced when attacked" do
 player1 = Player.new("name1")
 player2 = Player.new("name2")
-player2.attacking
+game = Game.new
+game.attacks(player2)
 expect(player2.hit_points).to eq(10)
-
 end
+
 
 
 end

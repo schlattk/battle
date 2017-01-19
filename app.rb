@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra'
 require './views/player.rb'
+require './views/game.rb'
 
 class Battle < Sinatra::Base
 
@@ -27,7 +28,7 @@ enable :sessions
   get '/attack' do
     @name1 = $player1
     @name2 = $player2
-    $player2.attacking
+    Game.new.attacks(@name2)
     erb :attack
   end
 

@@ -9,7 +9,7 @@ def initialize(name, hitpoints = DEFAULT_HIT_POINTS)
 @hit_points = hitpoints
 end
 
-def attacking
+def damage
 
   @hit_points -= 10
 
