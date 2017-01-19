@@ -21,6 +21,13 @@ RSpec.feature "Capybara feature test" do
     expect(page).to have_content "Kate attacked Konrad"
 
   end
+  scenario "by attacking player2 player1 can reduce player1's hitpoints by 10" do
+
+    attack
+
+    expect($player2.hit_points).to eq(10)
+
+  end
 
 
 end

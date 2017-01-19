@@ -25,8 +25,9 @@ enable :sessions
   end
 
   get '/attack' do
-    @name1 = $player1.name
-    @name2 = $player2.name
+    @name1 = $player1
+    @name2 = $player2
+    $player2.attacking
     erb :attack
   end
 
