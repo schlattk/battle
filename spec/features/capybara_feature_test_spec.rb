@@ -18,7 +18,7 @@ RSpec.feature "Capybara feature test" do
 
     attack
 
-    expect(page). to have_content "Kate attacks Konrad"
+    expect(page).to have_content "Kate attacked Konrad"
 
   end
 
