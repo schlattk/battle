@@ -25,7 +25,7 @@ RSpec.feature "Capybara feature test" do
 
     attack
 
-    expect($player2.hit_points).to eq(10)
+    expect(page).to have_content 10
 
   end
 
