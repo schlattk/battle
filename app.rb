@@ -29,7 +29,10 @@ enable :sessions
     @player2 = $game.player2
     @name1 = @player1.name
     @name2 = @player2.name
-    $game.attacks(@player2)
+    @attacker = $game.attacker.name
+    @victim = $game.victim.name
+    $game.attacks
+    $game.switch_players
     @p1_hp = @player1.hit_points
     @p2_hp = @player2.hit_points
     erb :attack

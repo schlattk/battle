@@ -9,8 +9,15 @@ let(:player2) {double :player2}
 describe '#attack' do
   it 'damages the player' do
     expect(player2).to receive(:damage)
-    game.attacks(player2)
+    game.attacks
     end
+end
+
+describe '#switch_players' do
+  it "switches attacking player" do
+    game.switch_players
+    expect(game.attacker).to eq player2
+  end
 end
 
 
