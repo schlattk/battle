@@ -20,5 +20,18 @@ describe '#switch_players' do
   end
 end
 
+describe '#over?' do
+  it "returns true when game is finished" do
+    game = Game.new(Player.new("a"),Player.new("b"))
+
+    3.times do
+      game.attacks
+      game.switch_players
+      end
+    expect(game.over?).to eq(true)
+  end
+
+end
+
 
 end

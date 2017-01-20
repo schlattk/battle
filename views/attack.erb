@@ -1,4 +1,7 @@
 <h2><%=@attacker%> attacked <%=@victim%></h2>
 <h2><%=@name1%> HP <%=@p1_hp%> <%=@name2%> HP <%=@p2_hp%></h2>
-
+<% if @game_over %>
+<h2><%=@victim%> has lost</h2>
+<%else%>
 <a href="/attack">Attack</a>
+<%end%>

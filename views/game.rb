@@ -18,4 +18,8 @@ class Game
     victim == player1 ? @victim = player2 : @victim = player1
   end
 
+  def over?
+    player1.hit_points == 0 || player2.hit_points == 0
+  end
+
 end

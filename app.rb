@@ -33,6 +33,7 @@ enable :sessions
     @victim = $game.victim.name
     $game.attacks
     $game.switch_players
+    @game_over = $game.over? 
     @p1_hp = @player1.hit_points
     @p2_hp = @player2.hit_points
     erb :attack
